@@ -767,6 +767,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     </style>
     
+    <!-- easter -->
+    <style>
+      #happy_easter{
+        width: 18rem;
+      }
+      .happy_easter_top{
+        margin-top: -8rem;
+        margin-right: -8rem;
+      }
+      .easter_text_bg1{
+        /* background-image: url('/static/easter/bg/text_bg1.png'); */
+        background-image: linear-gradient(45deg,rgb(194, 63, 255),rgb(71, 71, 255),rgb(181, 83, 255),rgb(65, 65, 255),rgb(160, 83, 255));
+        background-size: cover;
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+      }
+      .easter_text_sm_bg1{
+        background-image: url('/static/easter/bg/text_bg1.png');
+        /* background-image: linear-gradient(45deg,rgb(194, 63, 255),rgb(71, 71, 255),rgb(181, 83, 255),rgb(65, 65, 255),rgb(160, 83, 255)); */
+        background-size: cover;
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+      }
+      .navbar a:hover,
+      .navbar .active,
+      .navbar .active:focus,
+      .navbar li:hover>.easter_text_sm_bg1_hover {
+        background-image: url('/static/easter/bg/text_bg1.png');
+        /* background-image: linear-gradient(45deg,rgb(194, 63, 255),rgb(71, 71, 255),rgb(181, 83, 255),rgb(65, 65, 255),rgb(160, 83, 255)); */
+        background-size: cover;
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+        color: transparent;
+      }
+      #container_text .request-box .circle3 {
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        height: 2.5rem;
+        
+        background: radial-gradient(rgb(174, 174, 174),rgb(51, 0, 255));
+        /* background: url('/static/easter/bg/text_bg1.png') ; */
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        border-radius: 1.625rem;
+        transition: all 0.4s ease-in-out;
+      }
+      #container_text .request-box .req-btn:hover .circle3 {
+        width: 100%;
+      }
+      
+      #container_text .request-box .circle3 .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+      }
+      .egg{
+        width: 7rem;
+      }
+      .egg_top{
+        margin-top: -2.5rem;
+        margin-left: -1.8rem;
+      }
+      #bunny{
+        width: 18rem;
+      }
+      .bunny_top{
+        margin-bottom: -2rem;
+      }
+      #footer_decor_easter{
+        width: 30rem;
+      }
+      .footer_decor_easter_top{
+        margin-top: -19rem;
+      }
+      #bunny1{
+        width: 13rem;
+      }
+      .bunny1_top{
+
+      }
+    </style>
+    
   </head>
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9279EQWMW1"></script>
@@ -934,6 +1027,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto hom pongal_text_theme1" style="color: transparent;" 
               {% elif current_theme == 'vishu' %}
                 class="nav-link scrollto hom " style="color: yellow;text-shadow: 0px 0px 10px black;"
+              {% elif current_theme == 'easter' %}
+                class="nav-link scrollto hom easter_text_sm_bg1" style="color: transparent;"
               {% else %} 
               class="nav-link scrollto hom" 
               {% endif %} 
@@ -947,6 +1042,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="nav-link scrollto abot hover_anchor_pongal" 
                   {% elif current_theme == 'vishu' %}
                     class="nav-link scrollto abot hover_anchor_vishu"
+                  {% elif current_theme == 'easter' %}
+                    class="nav-link scrollto abot easter_text_sm_bg1_hover"
                   {% else %} 
                     class="nav-link scrollto abot hover_anchor" 
                   {% endif %} 
@@ -960,6 +1057,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto serv hover_anchor_pongal"
               {% elif current_theme == 'vishu' %}
               class="nav-link scrollto serv hover_anchor_vishu"
+              {% elif current_theme == 'easter' %}
+              class="nav-link scrollto serv easter_text_sm_bg1_hover"
               {% else %}
               class="nav-link scrollto serv hover_anchor" 
               {% endif %}
@@ -973,6 +1072,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cor hover_anchor_pongal" 
               {% elif current_theme == 'vishu' %}
               class="nav-link scrollto cor hover_anchor_vishu"
+              {% elif current_theme == 'easter' %}
+              class="nav-link scrollto cor easter_text_sm_bg1_hover"
               {% else %}
               class="nav-link scrollto cor hover_anchor" 
               {% endif %}
@@ -986,6 +1087,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cors hover_anchor_pongal" 
               {% elif current_theme == 'vishu' %}
               class="nav-link scrollto cors hover_anchor_vishu"
+              {% elif current_theme == 'easter' %}
+              class="nav-link scrollto cors easter_text_sm_bg1_hover"
               {% else %}
               class="nav-link scrollto cors hover_anchor" 
               {% endif %}
@@ -1000,6 +1103,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto event hover_anchor_pongal" 
               {% elif current_theme == 'vishu' %}
               class="nav-link scrollto events hover_anchor_vishu"
+              {% elif current_theme == 'easter' %}
+              class="nav-link scrollto events easter_text_sm_bg1_hover"
               {% else %}
               class="nav-link scrollto event hover_anchor" 
               {% endif %}
@@ -1013,6 +1118,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cont hover_anchor_pongal" 
               {% elif current_theme == 'vishu' %}
               class="nav-link scrollto cont hover_anchor_vishu"
+              {% elif current_theme == 'easter' %}
+              class="nav-link scrollto cont easter_text_sm_bg1_hover"
               {% else %}
               class="nav-link scrollto cont hover_anchor" 
               {% endif %}
@@ -1661,6 +1768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       <section id="readmore1">
         <div class="content">
+
           {% if current_theme == 'pongal' %}
           <div class="position-relative" style="z-index: 1;">
             <div class="position-absolute start-50 translate-middle-x top-100 pongal_gif1_top">
@@ -1678,7 +1786,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <img draggable="false"id="happy_vishu" src="{% static 'vishu/decor/happy_vishu.png' %}" alt="">
             </div>  
           </div>
+          {% elif current_theme == "easter" %}
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute end-0 top-100 happy_easter_top">
+              <img draggable="false"id="happy_easter" src="{% static 'easter/decor/happy_easter.png' %}" alt="">
+            </div>  
+          </div>
           {% endif %}
+
+
           {% if current_theme == 'pongal' %}
           <h3 class="main-head pongal_text_theme" style="color: transparent;"><b>ALTOS Technologies</b></h3>
           <h3 class="mt-3 sub-head">
@@ -1691,6 +1807,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h3 class="mt-3 sub-head">
             We Deal With The Aspects Of
             <span class="vishu_text_bg1" style="color: transparent"
+              >Professional IT Solutions</span
+            >
+          </h3>
+          {% elif current_theme == "easter" %}
+          <h3 class="main-head easter_text_bg1" style="color: transparent;"><b>ALTOS Technologies</b></h3>
+          <h3 class="mt-3 sub-head">
+            We Deal With The Aspects Of
+            <span class="easter_text_bg1" style="color: transparent"
               >Professional IT Solutions</span
             >
           </h3>
@@ -1718,6 +1842,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle1" 
               {% elif current_theme == 'vishu' %} 
                 class="circle2" 
+              {% elif current_theme == 'easter' %} 
+                class="circle3" 
               {% else %} 
                 class="circle" 
               {% endif %}>
@@ -1825,6 +1951,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
             <h4 style="color: rgb(243, 243, 243);padding-left: 3rem;">Why Choose Us</h4>
+            {% elif current_theme == 'easter' %}
+            <h4 class="easter_text_bg1" style="color: transparent">Why Choose Us</h4>
             {% else %}
             <h4 style="color: rgb(243, 243, 243)">//Why Choose Us</h4>
             {% endif %}
@@ -1851,6 +1979,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative" style="z-index: 10;">
                     <div class="position-absolute start-50 translate-middle-x kp1_top"> 
                       <img draggable="false"id="kp1" src="{% static 'vishu/decor/vishu_kanies/vishu_kani1.png' %}" alt="">
+                    </div>
+                  </div>
+                  <i class="bx bx-receipt" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg1.png' %}" alt="">
                     </div>
                   </div>
                   <i class="bx bx-receipt" style="color: #0fa49b;visibility: hidden;"></i>
@@ -1892,6 +2027,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-support" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg2.png' %}" alt="">
+                    </div>
+                  </div>
+                  <i class="bx bx-support" style="color: #0fa49b;visibility: hidden;"></i>
                   {% else %}
                   <i class="bx bx-support" style="color: #0fa49b"></i>
                   {% endif %}
@@ -1920,6 +2062,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg3.png' %}" alt="">
+                    </div>
+                  </div>
+                  <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
                   {% else %}
                   <i class="bx bx-shield" style="color: #0fa49b"></i>
                   {% endif %}
@@ -1943,6 +2092,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative" style="z-index: 10;">
                     <div class="position-absolute start-50 translate-middle-x kp1_top"> 
                       <img draggable="false"id="kp1" src="{% static 'vishu/decor/vishu_kanies/vishu_kani4.png' %}" alt="">
+                    </div>
+                  </div>
+                  <i class="bx bx-cube-alt" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg4.png' %}" alt="">
                     </div>
                   </div>
                   <i class="bx bx-cube-alt" style="color: #0fa49b;visibility: hidden;"></i>
@@ -1978,6 +2134,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     name="layers-outline"
                     style="color: #0fa49b ;visibility: hidden;"
                   ></ion-icon>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg5.png' %}" alt="">
+                    </div>
+                  </div>
+                  <ion-icon
+                    name="layers-outline"
+                    style="color: #0fa49b ;visibility: hidden;"
+                  ></ion-icon>
                   {% else %}
                   <ion-icon
                     name="layers-outline"
@@ -2005,6 +2171,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative" style="z-index: 10;">
                     <div class="position-absolute start-50 translate-middle-x kp1_top"> 
                       <img draggable="false"id="kp1" src="{% static 'vishu/decor/vishu_kanies/vishu_kani6.png' %}" alt="">
+                    </div>
+                  </div>
+                  <ion-icon name="people-outline" style="color: #0fa49b; visibility: hidden;">
+                    {% elif current_theme == 'easter' %}
+                  <div class="position-relative" style="z-index: 10;">
+                    <div class="position-absolute start-50 translate-middle-x egg_top"> 
+                      <img draggable="false"class="egg" src="{% static 'easter/decor/eggs/egg6.png' %}" alt="">
                     </div>
                   </div>
                   <ion-icon name="people-outline" style="color: #0fa49b; visibility: hidden;">
@@ -2050,6 +2223,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <h1 class="visible-head" style="color: transparent;">
               <span class="vishu_text_bg1">Our</span><span class="vishu_text_bg1"> Technologies</span>
+            </h1>
+            {% elif current_theme == 'easter' %}
+            <h1 class="visible-head" style="color: transparent;">
+              <span class="easter_text_bg1">Our</span><span class="easter_text_bg1"> Technologies</span>
             </h1>
             {% else %}
             <h1 class="visible-head">
@@ -2125,6 +2302,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2156,6 +2335,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2227,6 +2408,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2258,6 +2441,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2331,6 +2516,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2361,6 +2548,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle1" 
                 {% elif current_theme == 'vishu' %} 
                   class="circle2" 
+                {% elif current_theme == 'easter' %} 
+                  class="circle3" 
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -2415,6 +2604,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p class="pongal_text_theme" style="color: transparent;">Check our Clients</p>
           {% elif current_theme == 'vishu' %}
           <p class="vishu_text_bg1" style="color: transparent;">Check our Clients</p>
+          {% elif current_theme == 'easter' %}
+          <p class="easter_text_bg1" style="color: transparent;">Check our <span class="text-light" style="text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.469)">Clients</span></p>
           {% else %}
           <p>Check our <span style="color: rgb(39, 112, 141)">Clients</span></p>
           {% endif %}
@@ -2479,6 +2670,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative">
                     <div class="position-absolute bottom-0 lord_krishna_top">
                       <img id="lord_krishna" src="{% static 'vishu/decor/peacock_feather_big.png' %}" alt="">
+                    </div>
+                  </div>
+                  {% elif current_theme == 'easter' %}
+                  <div class="position-relative">
+                    <div class="position-absolute bottom-0 bunny_top">
+                      <img id="bunny" src="{% static 'easter/decor/bunny1.png' %}" alt="">
                     </div>
                   </div>
                   {% endif %}
@@ -2884,6 +3081,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'pongal/decor/pongal_footer_decor.png' %}" alt="">
       <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'pongal/decor/pongal_footer_decor.png' %}" alt="">
     </div>
+    {% elif current_theme == "easter" %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: 0;">
+      <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    </div>
     {% endif %}
 
     <footer id="footer">
@@ -3017,6 +3233,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="position-relative" style="z-index: 1;">
       <div class="position-absolute end-0 top-100 happy_vishu_top1">
         <img draggable="false"id="happy_vishu1" src="{% static 'vishu/decor/happy_vishu1.png' %}" alt="">
+      </div>  
+    </div>
+    {% elif current_theme == "easter" %}
+    <div class="position-relative" style="z-index: 1;">
+      <div class="position-absolute end-0 top-100 footer_decor_easter_top">
+        <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
       </div>  
     </div>
     {% endif %}
