@@ -206,14 +206,31 @@
   }
 }
 </style>
+{% elif current_theme == 'easter' %}
+<style>
+  #navbar .cont{
+    background-image: url('/static/easter/bg/text_bg1.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    color: transparent;
+    text-shadow: 0px 0px 10px black;
+  }
+  #eater_balloon{
+    width: 22rem;
+  }
+  .eater_balloon_top{
+    margin-top: -6rem;
+  }
+</style>
 {% else %}
 <style>
-
-
-#navbar .cont{
+  #navbar .cont{
     color: #189aa6;
     font-weight: 800;
- 
+    
   }
 </style>
 {% endif %}
@@ -239,6 +256,8 @@
           <p class="pongal_text_theme" style="color: transparent;">Contact Us</p>
           {% elif current_theme == 'vishu' %} 
           <p class="vishu_text_bg1" style="color: transparent;">Contact Us</p>
+          {% elif current_theme == 'easter' %} 
+          <p class="easter_text_bg1" style="color: transparent;">Contact Us</p>
           {% else %}
           <p style="color: rgb(39, 112, 141);">Contact Us</p>
           {% endif %}
@@ -255,6 +274,12 @@
       <div class="position-relative">
         <div class="position-absolute top-0 end-0 vishu_little_krishna_top">
           <img id="vishu_little_krishna" src="{% static 'vishu/decor/pot.png' %}" alt="">
+        </div>
+      </div>
+      {% elif current_theme == 'easter' %} 
+      <div class="position-relative">
+        <div class="position-absolute top-0 end-0 eater_balloon_top">
+          <img id="eater_balloon" src="{% static 'easter/decor/ballons_all.png' %}" alt="">
         </div>
       </div>
       {% endif %}
@@ -308,6 +333,11 @@
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-geo-alt me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -336,6 +366,11 @@
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-envelope me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -355,6 +390,11 @@
                 {% elif current_theme == 'vishu' %} 
                 class="bi bi-phone me-2 text-light" 
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-phone me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
                 {% else %}
@@ -388,6 +428,11 @@
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-geo-alt me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -414,6 +459,11 @@
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-envelope me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -431,6 +481,11 @@
                 {% elif current_theme == 'vishu' %} 
                 class="bi bi-phone me-2 text-light" 
                 style="background-image: url('static/vishu/bg/sm_button_bg.png');
+                background-size: cover;
+                background-repeat: no-repeat;"
+                {% elif current_theme == 'easter' %} 
+                class="bi bi-phone me-2 text-light" 
+                style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
                 {% else %}
