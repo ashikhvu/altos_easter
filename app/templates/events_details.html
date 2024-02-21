@@ -146,6 +146,19 @@
     color: yellow;
   }
 </style>
+{% elif current_theme == 'easter' %} 
+<style>
+  #navbar .event{
+    background-image: url('/static/easter/bg/text_bg1.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    color: transparent;
+    text-shadow: 0px 0px 10px black;
+  }
+</style>
 {% endif %}
     <section id="team" class="team">
       <div class="container" data-aos="fade-up">
