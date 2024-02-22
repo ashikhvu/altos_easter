@@ -243,6 +243,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 </style>
 
+<!-- seaster -->
+<style>
+  .easter_text_bg1{
+    /* background-image: url('/static/easter/bg/text_bg1.png'); */
+    background-image: linear-gradient(45deg,rgb(194, 63, 255),rgb(71, 71, 255),rgb(181, 83, 255),rgb(65, 65, 255),rgb(160, 83, 255));
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .easter_text_sm_bg1{
+    background-image: url('/static/easter/bg/text_bg1.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.easter_text_sm_bg1_hover {
+    background-image: url('/static/easter/bg/text_bg1.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    color: transparent;
+  }
+  .color-button3{
+    font-size: 1em;
+
+    background: radial-gradient(rgb(56, 56, 56),rgb(51, 0, 255));
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 100px;
+    width: 35vh;
+  }
+
+  @media (max-width: 768px) {
+    .color-button3{
+      margin: 20px 20px;
+    }
+  }
+  #footer_decor_easter{
+    width: 30rem;
+  }
+  .footer_decor_easter_top{
+    margin-top: -19rem;
+  }
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -350,6 +411,21 @@ gtag('config', 'G-3RLTXDEGMP');
           </div>
         </div>
       </div>
+    {% elif current_theme == 'easter' %}
+    <div class="position-relative" style="z-index: -1;">
+      <div class="position-absolute end-0 top-0 top_decor_top" style="margin-top: -2rem;">
+        <div class="d-flex">
+          <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="position-relative" style="z-index: -1;">
+      <div class="position-absolute start-0 top-0 top_decor_top" style="margin-top: -2rem;">
+        <div class="d-flex">
+          <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
+        </div>
+      </div>
+    </div>
     {% endif %}
 
 <div class="container d-flex align-items-center justify-content-lg-between">
@@ -373,6 +449,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_pongal" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu"
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto hom easter_text_sm_bg1_hover"
         {% else %} 
         class="nav-link scrollto hom hover_anchor" 
         {% endif %} 
@@ -386,6 +464,8 @@ gtag('config', 'G-3RLTXDEGMP');
               class="nav-link scrollto abot hover_anchor_pongal" 
             {% elif current_theme == 'vishu' %} 
             class="nav-link scrollto hom hover_anchor_vishu"
+            {% elif current_theme == 'easter' %}
+              class="nav-link scrollto abot easter_text_sm_bg1_hover"
             {% else %} 
               class="nav-link scrollto abot hover_anchor" 
             {% endif %} 
@@ -399,6 +479,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto serv pongal_text_theme1" style="color: transparent;" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu" style="color: yellow;"
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto serv easter_text_sm_bg1" style="color: transparent"
         {% else %}
         class="nav-link scrollto serv hover_anchor" 
         {% endif %}
@@ -412,6 +494,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto cor hover_anchor_pongal" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu"
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto cor easter_text_sm_bg1_hover"
         {% else %}
         class="nav-link scrollto cor hover_anchor" 
         {% endif %}
@@ -425,6 +509,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto cors hover_anchor_pongal" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu"
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto cors easter_text_sm_bg1_hover"
         {% else %}
         class="nav-link scrollto cors hover_anchor" 
         {% endif %}
@@ -439,6 +525,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto event hover_anchor_pongal"
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu" 
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto event easter_text_sm_bg1_hover"
         {% else %}
         class="nav-link scrollto event hover_anchor" 
         {% endif %}
@@ -452,6 +540,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto cont hover_anchor_pongal" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu"
+        {% elif current_theme == 'easter' %}
+          class="nav-link scrollto cont easter_text_sm_bg1_hover"
         {% else %}
         class="nav-link scrollto cont hover_anchor" 
         {% endif %}
@@ -836,6 +926,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'vishu' %} 
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span class="vishu_text_bg1" style="font-size: 5vh;color: transparent;">Improve Your Audience with</span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none vishu_text_bg1" style="color: transparent;">Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
+        {% elif current_theme == 'easter' %} 
+        <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span >Improve Your Audience with</span> <br> <span class="easter_text_bg1" style="font-size: 10vh;color: transparent;"> ALT Whatsapp Module </span></p>
+        <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none">Improve Your Audience with</span> <br> <span class="easter_text_bg1" style="color:transparent"> ALT Whatsapp Module </span></p>
         {% else %}
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">Improve Your Audience with</span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none" >Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
@@ -852,6 +945,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'vishu' %} 
         <a role="button" href="#" class="color-button2 text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button2 text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
+        {% elif current_theme == 'easter' %} 
+        <a role="button" href="#" class="color-button3 text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
+        <a role="button" href="#" class="color-button3 text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
         {% else %}
         <a role="button" href="#" class="color-button text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
@@ -881,6 +977,8 @@ window.addEventListener('resize', handleResize);
               <p class="pongal_text_theme" style="color: transparent;">Any best points to highlight <br> about module</p>
               {% elif current_theme == 'vishu' %} 
               <p class="vishu_text_bg1" style="color: transparent;">Any best points to highlight <br> about module</p>
+              {% elif current_theme == 'easter' %} 
+              <p class="easter_text_bg1" style="color: transparent;">Any best points to highlight <br> about module</p>
               {% else %}
               <p>Any best points to highlight <br> about module</p>
               {% endif %}
@@ -892,6 +990,8 @@ window.addEventListener('resize', handleResize);
                   <img src="/static/pongal/img/erp.png" alt="ERP" />
                   {% elif current_theme == 'vishu' %} 
                   <img src="/static/vishu/img/erp.png" alt="ERP" />
+                  {% elif current_theme == 'easter' %} 
+                  <img src="/static/easter/img/erp.png" alt="ERP" />
                   {% else %}
                   <img src="/static/img/team/erp.png" alt="ERP" />
                   {% endif %}
@@ -908,6 +1008,8 @@ window.addEventListener('resize', handleResize);
                 <img src="/static/pongal/img/erp.png" alt="ERP" />
                 {% elif current_theme == 'vishu' %} 
                   <img src="/static/vishu/img/erp.png" alt="ERP" />
+                {% elif current_theme == 'easter' %} 
+                  <img src="/static/easter/img/erp.png" alt="ERP" />
                 {% else %}
                 <img src="/static/img/team/erp.png" alt="ERP" />
                 {% endif %}
@@ -926,6 +1028,8 @@ window.addEventListener('resize', handleResize);
                 <img src="/static/pongal/img/crm.png" alt="CRM" />
                 {% elif current_theme == 'vishu' %} 
                 <img src="/static/vishu/img/crm.png" alt="CRM" />
+                {% elif current_theme == 'easter' %} 
+                <img src="/static/easter/img/crm.png" alt="CRM" />
                 {% else %}
                 <img src="/static/img/team/crm.png" alt="CRM" />
                 {% endif %}
@@ -938,6 +1042,8 @@ window.addEventListener('resize', handleResize);
                   <img src="/static/pongal/img/crm.png" alt="CRM" />
                   {% elif current_theme == 'vishu' %} 
                   <img src="/static/vishu/img/crm.png" alt="CRM" />
+                  {% elif current_theme == 'easter' %} 
+                  <img src="/static/easter/img/crm.png" alt="CRM" />
                   {% else %}
                   <img src="/static/img/team/crm.png" alt="CRM" />
                   {% endif %}
@@ -1027,6 +1133,9 @@ window.addEventListener('resize', handleResize);
             {% elif current_theme == 'vishu' %} 
             <p class=" more-head text- d-none d-sm-none vishu_text_bg1"  style="font-size: 1.7em;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
             <p  class=" more-head text- d-lg-block vishu_text_bg1"  style="font-size: 3rem;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
+            {% elif current_theme == 'easter' %} 
+            <p class=" more-head text- d-none d-sm-none easter_text_bg1"  style="font-size: 1.7em;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
+            <p  class=" more-head text- d-lg-block easter_text_bg1"  style="font-size: 3rem;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
             {% else %}
             <p class=" more-head text-white d-none d-sm-none"  style="font-size: 1.7em;"><b>Revolutionizing Business Marketing </b></p>
             <p  class=" more-head text-white d-lg-block"  style="font-size: 3rem;"><b>Revolutionizing Business Marketing </b></p>
@@ -1053,6 +1162,8 @@ window.addEventListener('resize', handleResize);
           <p class="text- mb-3 pongal_text_theme1" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% elif current_theme == 'vishu' %} 
           <p class="text- mb-3 vishu_text_bg1" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
+          {% elif current_theme == 'easter' %} 
+          <p class="text- mb-3 easter_text_bg1" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% else %}
           <p class="text-white mb-3 pongal_text_theme" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% endif %}
@@ -1071,6 +1182,12 @@ window.addEventListener('resize', handleResize);
             <div class="position-relative">
               <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -2.6rem;">
                 <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
+              </div>
+            </div>
+            {% elif current_theme == 'easter' %} 
+            <div class="position-relative" style="z-index: 10;">
+              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
+                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
             {% endif %}
@@ -1095,6 +1212,12 @@ window.addEventListener('resize', handleResize);
             <div class="position-relative">
               <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -2.6rem;">
                 <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
+              </div>
+            </div>
+            {% elif current_theme == 'easter' %} 
+            <div class="position-relative" style="z-index: 10;">
+              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
+                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
             {% endif %}
@@ -1122,6 +1245,12 @@ window.addEventListener('resize', handleResize);
                 <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'easter' %} 
+            <div class="position-relative" style="z-index: 10;">
+              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
+                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
+              </div>
+            </div>
             {% endif %}
 
             <div class="box-contents" style="height: 50%;" >
@@ -1136,6 +1265,27 @@ window.addEventListener('resize', handleResize);
       </div>
   </section>
 </div>
+
+{% if current_theme == "easter" %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+      <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    </div>
+    {% endif %}
 
 <footer id="footer">
   <div class="footer-top">
@@ -1237,6 +1387,12 @@ window.addEventListener('resize', handleResize);
     <div class="position-relative" style="z-index: 1;">
       <div class="position-absolute end-0 top-100 happy_vishu_top1">
         <img draggable="false"id="happy_vishu1" src="{% static 'vishu/decor/happy_vishu1.png' %}" alt="">
+      </div>  
+    </div>
+{% elif current_theme == "easter" %}
+    <div class="position-relative" style="z-index: 1;">
+      <div class="position-absolute end-0 top-100 footer_decor_easter_top">
+        <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
       </div>  
     </div>
 {% endif %}
