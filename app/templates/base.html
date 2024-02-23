@@ -222,6 +222,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .footer_decor_easter_top{
         margin-top: -19rem;
       }
+      @media screen and (max-width:991px) {
+        #navbar_left{
+          width: 10rem;
+        }
+        #navbar_right{
+          width: 10rem;
+        }
+      }
+      @media screen and (min-width:992px) {
+        #navbar_left{
+          width: 15rem;
+        }
+        #navbar_right{
+          width: 15rem;
+        }
+      }
+      @media screen and (max-width:350px) {
+        #navbar_left{
+          width: 7rem;
+        }
+        #navbar_right{
+          width: 7rem;
+        }
+      }
+      @media screen and (max-width:797px) {
+        #footer_decor_easter{
+          width: 20rem;
+        }
+        .footer_decor_easter_top{
+          margin-top: -14.5rem;
+        }
+      }
+      @media screen and (max-width:450px) {
+        #footer_decor_easter{
+          width: 15rem;
+        }
+        .footer_decor_easter_top{
+          margin-top: -12.5rem;
+          margin-right: -0.5rem;
+        }
+      }
+      @media screen and (max-width:320px) {
+        #footer_decor_easter{
+          width: 10rem;
+        }
+        .footer_decor_easter_top{
+          margin-top: -11.5rem;
+          margin-right: -0.5rem;
+        }
+      }
   </style>
 
 </head>
@@ -338,14 +388,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="position-relative" style="z-index: -1;">
         <div class="position-absolute end-0 top-0 top_decor_top" style="margin-top: -2rem;">
           <div class="d-flex">
-            <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
+            <img draggable="false" id="navbar_left" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
           </div>
         </div>
       </div>
       <div class="position-relative" style="z-index: -1;">
         <div class="position-absolute start-0 top-0 top_decor_top" style="margin-top: -2rem;">
           <div class="d-flex">
-            <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
+            <img draggable="false" id="navbar_right" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
           </div>
         </div>
       </div>

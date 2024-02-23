@@ -206,6 +206,7 @@
   }
 }
 </style>
+<!-- easter -->
 {% elif current_theme == 'easter' %}
 <style>
   #navbar .cont{
@@ -223,6 +224,14 @@
   }
   .eater_balloon_top{
     margin-top: -6rem;
+  }
+  @media screen and (max-width:767px) {
+    #eater_balloon{
+      width: 15rem;
+    }
+    .eater_balloon_top{
+      margin-top: -2.5rem;
+    }
   }
 </style>
 {% else %}

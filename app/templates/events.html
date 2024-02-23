@@ -567,18 +567,140 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top: -9rem;
     margin-right: -8rem;
   }
-  #easter_frame_corner{
+  .easter_frame_corner{
     width: 7rem;
   }
   .easter_frame_corner_top{
     margin-right: -1rem;
-    margin-bottom: -7rem;
+    margin-bottom: -1rem;
   }
   #footer_decor_easter{
     width: 30rem;
   }
   .footer_decor_easter_top{
     margin-top: -19rem;
+  }
+  @media screen and (max-width:991px) {
+    #navbar_left{
+      width: 10rem;
+    }
+    #navbar_right{
+      width: 10rem;
+    }
+  }
+  @media screen and (min-width:992px) {
+    #navbar_left{
+      width: 15rem;
+    }
+    #navbar_right{
+      width: 15rem;
+    }
+  }
+  @media screen and (max-width:350px) {
+    #navbar_left{
+      width: 7rem;
+    }
+    #navbar_right{
+      width: 7rem;
+    }
+  }
+  @media screen and (max-width:797px) {
+    #footer_decor_easter{
+      width: 20rem;
+    }
+    .footer_decor_easter_top{
+      margin-top: -14.5rem;
+    }
+  }
+  @media screen and (max-width:450px) {
+    #footer_decor_easter{
+      width: 15rem;
+    }
+    .footer_decor_easter_top{
+      margin-top: -12.5rem;
+      margin-right: -0.5rem;
+    }
+  }
+  @media screen and (max-width:320px) {
+    #footer_decor_easter{
+      width: 10rem;
+    }
+    .footer_decor_easter_top{
+      margin-top: -11.5rem;
+      margin-right: -0.5rem;
+    }
+  }
+  @media screen and (max-width:1500px) {
+    #easter_ballon1{
+      width: 12rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -7rem;
+      margin-right: -0rem;
+    }
+  }
+  @media screen and (max-width:1399px) {
+    #easter_ballon1{
+      width: 12rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -7rem;
+      margin-right: -0rem;
+    }
+  }
+  @media screen and (max-width:1199px) {
+    #easter_ballon1{
+      width: 12rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -7rem;
+      margin-right: -0rem;
+    }
+  }
+  @media screen and (max-width:932px) {
+    #easter_ballon1{
+      width: 12rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -7rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:712px) {
+    #easter_ballon1{
+      width: 7rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -5rem;
+      margin-right: -4rem;
+    }
+  }
+  @media screen and (max-width:652px) {
+    #easter_ballon1{
+      width: 7rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -7rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:385px) {
+    #easter_ballon1{
+      width: 5rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -4rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:337px) {
+    #easter_ballon1{
+      width: 4rem;
+    }
+    .easter_ballon1_top{
+      margin-top: -3rem;
+      margin-right: 0rem;
+    }
   }
 </style>
 
@@ -696,14 +818,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="position-relative" style="z-index: -1;">
         <div class="position-absolute end-0 top-0 top_decor_top" style="margin-top: -2rem;">
           <div class="d-flex">
-            <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
+            <img draggable="false" id="navbar_left" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
           </div>
         </div>
       </div>
       <div class="position-relative" style="z-index: -1;">
         <div class="position-absolute start-0 top-0 top_decor_top" style="margin-top: -2rem;">
           <div class="d-flex">
-            <img draggable="false"style="width:15rem;" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
+            <img draggable="false" id="navbar_right" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
           </div>
         </div>
       </div>
@@ -1056,14 +1178,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <img src="{{i.ps_img.url}}">
                     </a>
                   </div>
-
-                  {% if current_theme == 'easter' %} 
-                  <div class="position-relative" style="z-index: 10;">
-                    <div class="position-absolute bottom-0 end-0 easter_frame_corner_top">
-                      <img id="easter_frame_corner" src="{% static 'easter/decor/frame/photo_frame_corner.png' %}" alt="">
-                    </div>
-                  </div>
-                  {% endif %}
                    
                   {% endif %}
                
@@ -1074,6 +1188,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <p>{{i.ps_des2}}</p>
                   <p>{{i.ps_des3}}</p>
                 </div>
+
+                {% if current_theme == 'easter' and i.ps_img %} 
+                <div class="position-relative" style="z-index: 10;">
+                  <div class="position-absolute bottom-0 end-0 easter_frame_corner_top">
+                    <img class="easter_frame_corner" src="{% static 'easter/decor/frame/photo_frame_corner.png' %}" alt="">
+                  </div>
+                </div>
+                {% endif %}
+
               </div>
           
            
